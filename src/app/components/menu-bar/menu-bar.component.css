@@ -35,10 +35,31 @@
 	text-decoration: none;
 	padding: 5px;
 	color: rgb(7, 7, 7);
-	font-family: 'Segoe UI';
+	transition: color .5s;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menu-bar__item > ul > li > a {
+	position: relative;
+}
+
+.menu-bar__item > ul > li > a::after {
+	content: '';
+	position: absolute;
+	height: 2px;
+	bottom: 2px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	background-color: rgb(7, 7, 7);
+	transition: width .5s;
+	transform-origin: center;
 }
 
 .menu-bar__item > ul > li > a:hover {
-	color: blue;
-	font-weight: 600;
+	color: rgba(7, 7 , 4, .6);
+}
+
+.menu-bar__item > ul > li > a:hover::after {
+	width: 100%;
 }
